@@ -1,4 +1,4 @@
-# infr030-m1rs
+# INFR250-M2RS
 
 ## Connection au cluster Openshift
 Pour vous connecter au cluster Openshift mis à disposition :
