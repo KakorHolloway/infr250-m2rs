@@ -52,7 +52,7 @@ Pour vérifier que vous êtes authentifiés, lancez la commande ```oc get pod```
 
 Pour le dépot sur moncampus : 
 
-- Les fichiers yaml de votre application et un README avec le nom du groupe. Dans un zip. (des commentaires dans le kustomization.yaml décrivant rapidement les actions du fichier).
+- Les fichiers yaml de votre application et un README avec le nom du groupe. Dans un zip. (des commentaires dans le kustomization.yaml décrivant rapidement les actions du fichier). Une capture d'écran du site.
 
 ### Préparatif 
 
@@ -64,5 +64,5 @@ Créez sur la plateforme Openshift à disposition (ou la votre si vous avez) les
 
 - Liez les deux pod avec un secret dédié pour les mots de passe et les services qui vont bien 
 
-- Enfin faites en sorte que l'application soit accessible depuis internet 
+- Enfin faites en sorte que l'application soit accessible depuis internet en <votreapp>.apps.openshift.kakor.ovh
 
