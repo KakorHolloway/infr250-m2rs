@@ -66,6 +66,8 @@ Créez sur la plateforme Openshift à disposition (ou la votre si vous avez) les
 
 - Enfin faites en sorte que l'application soit accessible depuis internet en <votreapp>.apps.openshift.kakor.ovh
 
+- Pas de PVC 
+
 Voici un exemple d'ingress :
 ```yaml
 apiVersion: networking.k8s.io/v1
