@@ -66,3 +66,24 @@ Créez sur la plateforme Openshift à disposition (ou la votre si vous avez) les
 
 - Enfin faites en sorte que l'application soit accessible depuis internet en <votreapp>.apps.openshift.kakor.ovh
 
+Voici un exemple d'ingress :
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx
+spec:
+  rules:
+    - host: nginx-correction.apps.openshift.kakor.ovh
+      http:
+        paths:
+        - path: ''
+          pathType: ImplementationSpecific
+          backend:
+            service:
+              name: nginx
+              port:
+                number: 80
+  tls:
+  - {}
+```
