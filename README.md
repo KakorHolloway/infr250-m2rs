@@ -105,7 +105,6 @@ Reproduisez cette arborescence à partir du travail précédent
         ├── dev
         │   ├── deployment.yaml
         │   └── kustomization.yaml
-
         └── production
             ├── deployment.yaml
             └── kustomization.yaml
