@@ -61,9 +61,10 @@ Créez sur la plateforme Openshift à disposition (ou la votre si vous avez) les
 - Un deploiement avec un seul réplica avec l'image prise de prestashop/prestashop sur dockerhub nommé harbor.kakor.ovh/public/prestashop
 
 Attention de mettre en place la variable d'en suivante pour éviter un crash loop :
-
+```
         - name: PS_FOLDER_ADMIN
           value: admin-dev
+```
 
 - Un deploiement avec un seul réplica avec l'image prise de mariadb sur dockerhub nommé harbor.kakor.ovh/public/mariadb
 
