@@ -47,3 +47,22 @@ Une fois authentifié (attention à ne pas recharger la page même si l'affichag
 Cliquez sur le lien Display Token et copiez dans votre terminal sur VScode la ligne de commande qui à été donné avec oc. 
 
 Pour vérifier que vous êtes authentifiés, lancez la commande ```oc get pod```
+
+## Exercice de remise en forme (avec livrable) 
+
+Pour le dépot sur moncampus : 
+
+- Les fichiers yaml de votre application et un README avec le nom du groupe. Dans un zip. (des commentaires dans le kustomization.yaml décrivant rapidement les actions du fichier).
+
+### Préparatif 
+
+Créez sur la plateforme Openshift à disposition (ou la votre si vous avez) les éléments suivants
+
+- Un deploiement avec un seul réplica avec l'image prise de prestashop/prestashop sur dockerhub nommé harbor.kakor.ovh/public/prestashop
+
+- Un deploiement avec un seul réplica avec l'image prise de mariadb sur dockerhub nommé harbor.kakor.ovh/public/mariadb
+
+- Liez les deux pod avec un secret dédié pour les mots de passe et les services qui vont bien 
+
+- Enfin faites en sorte que l'application soit accessible depuis internet 
+
