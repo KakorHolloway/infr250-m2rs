@@ -103,10 +103,10 @@ Reproduisez cette arborescence à partir du travail précédent
     |   └── vosautrefichiers.yaml...
     └── overlays
         ├── dev
-        │   ├── deployment.yaml
+        │   ├── deployment.yaml...
         │   └── kustomization.yaml
         └── production
-            ├── deployment.yaml
+            ├── deployment.yaml...
             └── kustomization.yaml
 ```
 
