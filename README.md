@@ -89,3 +89,36 @@ spec:
   tls:
   - {}
 ```
+
+## Partie Kustomize 
+
+Reproduisez cette arborescence à partir du travail précédent
+
+```
+├── someapp
+    ├── base
+    │   ├── deployment.yaml
+    │   ├── kustomization.yaml
+    │   └── service.yaml
+    |   └── vosautrefichiers.yaml...
+    └── overlays
+        ├── dev
+        │   ├── deployment.yaml
+        │   └── kustomization.yaml
+
+        └── production
+            ├── deployment.yaml
+            └── kustomization.yaml
+```
+
+En global, au déploiement existant on va ajouter quelques modifications via kustomize:
+
+ - Faites en sorte que tous les objets possèdent un label avec vos noms
+ - Le secret de mot de passe à la bdd doit être généré à partir d'un fichier plat (attention à la nomenclature)
+ - faites en sorte que le pod de l'application prestashop possède une quantité de ram de 512 Mo max et 200m vpu max via un patch
+ - Changez la version de l'image prestashop pour la mettre en version 9.0.1
+
+Par environnements :
+
+ - Ajoutez un préfixe à vos déploiements sous la forme "dev-" ou "prod-"
+ - Pour les 2 déploiement de votre mariadb et prestashop, modifiez le nom de vos variables d'env database pour ajouter un -dev ou -prod
