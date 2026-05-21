@@ -170,3 +170,9 @@ Installez la chart helm https://artifacthub.io/packages/helm/cloudpirates-nginx/
 Lors de l'installation faites en sorte que l'ingress soit activé et utilise un hostname spécifique à votre groupe (groupe-2-nginx.apps.openshift.kakor.ovh) (si la route ne fonctionne pas ce n'est pas très grave)
 
 Utilisez un fichier de values.yaml pour mettre en place ces options. 
+
+Commande de correction à exécuter :
+
+```
+helm install nginx-correction oci://registry-1.docker.io/cloudpirates/nginx --version 0.12.0 -f helm/exonginx/values.yaml
+```
