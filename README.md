@@ -127,3 +127,36 @@ Par environnements :
 
  - Ajoutez un préfixe à vos déploiements sous la forme "dev-" ou "prod-"
  - Pour les 2 déploiement de votre mariadb et prestashop, modifiez le nom de vos variables d'env database pour ajouter un -dev ou -prod
+
+
+## Partie HELM 
+
+### Installation de Helm 
+
+### Windows 
+
+Téléchargez le fichier helm pour votre système d'exploitation 
+
+https://get.helm.sh/helm-v3.21.0-windows-amd64.tar.gz
+
+Récupérez dans l'archive le fichier helm.exe
+
+copiez ce fichier dans le répertoire C:\Windows\System32
+
+### Linux 
+
+Exécutez les commandes suivantes :
+
+```
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+```
+
+### MAC
+
+Avec Brew, lancez la commande suivante :
+
+```
+brew install helm
+```
