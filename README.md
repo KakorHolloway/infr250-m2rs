@@ -160,3 +160,7 @@ Avec Brew, lancez la commande suivante :
 ```
 brew install helm
 ```
+
+## Reprise exercice Helm 
+
+Installez la solution sur votre poste et connectez vous à Openshift comme indiqué dans l'étape 1 (utilisez le compte lié à votre numéro de salle)
