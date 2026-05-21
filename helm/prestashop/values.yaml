@@ -9,3 +9,6 @@ mariadb:
 ingress:
   enabled: true
   host: prestashop.apps.openshift.kakor.ovh
+
+labels:
+  owner: "Belaud_Benjamin"
