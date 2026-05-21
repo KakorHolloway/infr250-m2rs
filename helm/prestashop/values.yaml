@@ -1,6 +1,11 @@
 prestashop:
   service:
     name: prestashop
+  env:
+    PS_ENABLE_SSL: "1"
+    PS_DOMAIN: prestashop.apps.openshift.kakor.ovh
+    PS_FOLDER_ADMIN: admin-dev
+    PS_LANGUAGE: "fr"
  
 mariadb:
   service:
@@ -8,7 +13,8 @@ mariadb:
  
 ingress:
   enabled: true
-  host: prestashop.apps.openshift.kakor.ovh
+  host: prestashop-correction.apps.openshift.kakor.ovh
 
 labels:
   owner: "Belaud_Benjamin"
+  test: "true"

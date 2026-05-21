@@ -32,14 +32,10 @@ spec:
               key: password
         - name: DB_NAME
           value: prestashop
-        - name: PS_ENABLE_SSL
-          value: "1"
-        - name: PS_DOMAIN
-          value: {{ .Values.ingress.host }}
-        - name: PS_FOLDER_ADMIN
-          value: admin-dev
-        - name: PS_LANGUAGE
-          value: "fr"
+        {{- range $key, $val :=.Values.prestashop.env}}
+        - name: {{ $key }}
+          value: {{ $val | quote }}
+        {{- end}}
         ports:
         - containerPort: 80
           protocol: TCP
