@@ -1,0 +1,20 @@
+image:
+  registry: harbor.kakor.ovh
+  repository: public/nginx
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+containerSecurityContext:
+  runAsUser:  0
+  runAsNonRoot: false
+  allowPrivilegeEscalation: true
+
+ingress:
+  enabled: true
+  hosts:
+    - host: nginx-correction.apps.openshift.kakor.ovh
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: 
+    - {}
