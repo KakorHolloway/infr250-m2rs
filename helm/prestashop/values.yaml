@@ -1,0 +1,11 @@
+prestashop:
+  service:
+    name: prestashop
+ 
+mariadb:
+  service:
+    name: mariadb
+ 
+ingress:
+  enabled: true
+  host: prestashop.apps.openshift.kakor.ovh

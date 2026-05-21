@@ -193,3 +193,15 @@ Dans votre chart, variabilisez :
 - le nom des service prestashop et mariadb 
 
 Testez que tout fonctionne en déployant dans votre namespace. Commencez à planifier l'arborescence de vos variables. 
+
+
+### Fin variabilisation :
+
+Via helm ajoutez la possibilité de pouvoir mettre en place ou non un ingress
+Faites en sorte que le secret contienne une chaine de caractère générée automatiquement si un mot de passe n'est pas déclaré(via les fonction https://helm.sh/fr/docs/v3/chart_template_guide/function_list)
+
+Dans le cas du deployment prestashop, faites en sorte avec un range que les valeurs d'environnement soient déclarées dans le fichier values (nom + valeur)
+
+Mettez en place pour toutes les ressources des labels contenant une variable d'environnement et un nom
+
+Générez un fichier NOTES.txt, qui permettra d'indiquer aux utlisateurs comment accéder à l'application si un ingress est déclaré. 

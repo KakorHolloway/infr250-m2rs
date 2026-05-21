@@ -4,6 +4,9 @@ metadata:
   creationTimestamp: null
   labels:
     app: nginx
+    {{- with .Values.label }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
   name: {{ .Values.deployment.name | trim }}
 spec:
   replicas: 1

@@ -1,2 +1,6 @@
 deployment:
-  name: toto-
+  name: toto
+
+label:
+  name: toto
+  test: testature
