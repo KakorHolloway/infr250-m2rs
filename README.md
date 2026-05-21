@@ -176,3 +176,11 @@ Commande de correction à exécuter :
 ```
 helm install nginx-correction oci://registry-1.docker.io/cloudpirates/nginx --version 0.12.0 -f helm/exonginx/values.yaml
 ```
+
+## Exercice global helm : Variabilisation de prestashop. 
+
+Le but va être dans un premier temps de créer une chart helm pour déployer l'application prestashop. 
+
+Pour ce faire créez un nouveau projet helm nommé "prestashop" qui contiendra les sources de l'exercice kustomize sans la partie kustomize. 
+
+Pour le moment je ne vous demande pas de variabiliser. Exécutez la commande helm template pour vérifier que votre application helm est bien déclarée. 
