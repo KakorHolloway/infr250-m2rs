@@ -1,0 +1,42 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+labels:
+- pairs:
+    name: "Belaud_Benjamin"
+
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: prestashop
+        labels:
+          app: prestashop
+      spec:      
+        template:
+          metadata:
+            labels:
+              app: prestashop
+          spec:
+            containers:
+            - name: prestashop
+              resources: 
+                limits:
+                  memory: "512Mi"
+                  cpu: "200m"
+
+secretGenerator:
+- name: password-mariadb-2
+  options:
+    disableNameSuffixHash: true
+  literals:
+  - password=B4teau123!
+
+resources:
+  - deployment-prestashop.yaml
+  - deployment-mariadb.yaml
+  - ingress.yaml
+  - service-prestashop.yaml
+  - service-mariadb.yaml
+  - secret.yaml
