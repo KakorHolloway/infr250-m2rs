@@ -1,7 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namePrefix: dev-
-
+patches:
+  - target:
+      kind: Deployment
+      name: prestashop
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: dev-prestashop
 resources:
   - ../../base
