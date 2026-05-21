@@ -184,3 +184,12 @@ Le but va être dans un premier temps de créer une chart helm pour déployer l'
 Pour ce faire créez un nouveau projet helm nommé "prestashop" qui contiendra les sources de l'exercice kustomize sans la partie kustomize. 
 
 Pour le moment je ne vous demande pas de variabiliser. Exécutez la commande helm template pour vérifier que votre application helm est bien déclarée. 
+
+### Suite variabilisation
+
+Dans votre chart, variabilisez :
+- l'adresse de votre ingress
+- le nom de votre deployment qui dépendra du nom de votre déploiement helm
+- le nom des service prestashop et mariadb 
+
+Testez que tout fonctionne en déployant dans votre namespace. Commencez à planifier l'arborescence de vos variables. 
